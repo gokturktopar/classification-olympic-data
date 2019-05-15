@@ -1,9 +1,8 @@
 
 library(lattice)
 library(caret)
-#(ggvis)
-#set working dir
-setwd("C:/Users/pico/Desktop/gokturk/4.sınıf/machineLearning/proje/120-years-of-olympic-history-athletes-and-results (1)")
+library(ggvis)
+library(plyr)
 
 #read Data
 source("handleMissingValues.R")
@@ -44,8 +43,7 @@ dev.off()
 
 
 #visualization data
-library(ggvis)
-library(plyr)
+
 count(olympicdata$Sport)$x
 count(olympicdata$Sex=="M")
 mean(olympicdata[olympicdata$Sex=="M",]$Age)
