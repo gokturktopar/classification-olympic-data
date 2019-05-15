@@ -4,5 +4,5 @@ handleMissingValues <- function(data) {
   meanofNonNa=sumofNonNa/length(nonNAIndex)
   NAIndex=which(is.na(data))
   data[NAIndex]<-meanofNonNa
-  return(data) 
+  return(as.integer(data)) 
 }
